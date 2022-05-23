@@ -36,4 +36,16 @@ public abstract class Player {
     public void setHand(ArrayList<Card> hand) {
         this.hand = hand;
     }
+
+    public void takeCard(Card card) {
+        hand.add(card);
+    }
+
+    public String printHand(){
+        return hand.toString();
+    }
+
+    public abstract Card playCard (String cardInput);
+
 }
+

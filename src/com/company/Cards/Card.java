@@ -1,5 +1,7 @@
 package com.company.Cards;
 
+import java.util.Locale;
+
 public class Card {
     public Type type;
     public Value value;
@@ -10,7 +12,7 @@ public class Card {
 
         this.type = type;
         this.value = value;
-        card = type.name() + value.name();
+        card = type.name() + " " + value.name();
         cardPoints = value.points;
     }
 
@@ -40,7 +42,7 @@ public class Card {
     }
 
     public String getCard() {
-        return card.toString();
+        return card.toLowerCase(Locale.ROOT);
     }
 
     @Override
